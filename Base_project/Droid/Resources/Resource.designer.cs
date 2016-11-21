@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Fabrikam.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Moodify.Droid.Resource", IsApplication=true)]
 
-namespace Fabrikam.Droid
+namespace Moodify.Droid
 {
 	
 	
@@ -26,7 +26,7 @@ namespace Fabrikam.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Fabrikam.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Moodify.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
@@ -3524,10 +3524,10 @@ namespace Fabrikam.Droid
 			public const int CardView_Light = 2131361818;
 			
 			// aapt resource value: 0x7f0a0172
-			public const int MainTheme = 2131362162;
+			public const int MyTheme = 2131362162;
 			
 			// aapt resource value: 0x7f0a0173
-			public const int MainTheme_Base = 2131362163;
+			public const int MyTheme_Base = 2131362163;
 			
 			// aapt resource value: 0x7f0a0032
 			public const int Platform_AppCompat = 2131361842;
