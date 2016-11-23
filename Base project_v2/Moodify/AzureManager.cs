@@ -14,15 +14,15 @@ namespace Moodify
         private static AzureManager instance;
         private MobileServiceClient client;
         private IMobileServiceTable<Timeline> timelineTable;
-        private IMobileServiceTable<Menu> menuTable;
-        private IMobileServiceTable<OrderList> orderListTable;
+        //private IMobileServiceTable<Menu> menuTable;
+       // private IMobileServiceTable<OrderList> orderListTable;
 
         private AzureManager()
         {
             this.client = new MobileServiceClient("http://likaifabrikamfood.azurewebsites.net");
             this.timelineTable = this.client.GetTable<Timeline>();
-            this.menuTable = this.client.GetTable<Menu>();
-            this.orderListTable = this.client.GetTable<OrderList>();
+           // this.menuTable = this.client.GetTable<Menu>();
+            //this.orderListTable = this.client.GetTable<OrderList>();
         }
 
         public MobileServiceClient AzureClient
@@ -55,21 +55,21 @@ namespace Moodify
             return await this.timelineTable.ToListAsync();
         }
 
-        public async Task<List<OrderList>> GetOrderList()
-        {
-            return await this.orderListTable.ToListAsync();
-        }
+        //public async Task<List<OrderList>> GetOrderList()
+        //{
+        //    return await this.orderListTable.ToListAsync();
+        //}
 
-        public async Task<List<Menu>> GetMenus()
-        {
-            return await this.menuTable.ToListAsync();
-        }
+        //public async Task<List<Menu>> GetMenus()
+        //{
+        //    return await this.menuTable.ToListAsync();
+        //}
 
         //Delete the data
-        public async Task DeleteOderList(OrderList orderList)
-        {
-            await this.orderListTable.DeleteAsync(orderList);
-        }
+        //public async Task DeleteOderList(OrderList orderList)
+        //{
+        //    await this.orderListTable.DeleteAsync(orderList);
+        //}
 
     }
 }
