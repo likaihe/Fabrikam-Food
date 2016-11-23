@@ -4,6 +4,8 @@
     <StackLayout BackgroundColor="White">
 
       <Button Text="See Timeline" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
+      <Button x:Name="loginButton" Text="Sign-in" MinimumHeightRequest="30"
+   Clicked="loginButton_Clicked"/>
       <Label x:Name="errorLabel" />
       <Grid>
         <Grid.RowDefinitions>

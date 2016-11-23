@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace Moodify
 {
@@ -43,6 +44,19 @@ namespace Moodify
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        //authenticate function
+        public interface IAuthenticate
+        {
+            Task<bool> Authenticate();
+        }
+
+        public static IAuthenticate Authenticator { get; private set; }
+
+        public static void Init(IAuthenticate authenticator)
+        {
+            Authenticator = authenticator;
         }
     }
 }
