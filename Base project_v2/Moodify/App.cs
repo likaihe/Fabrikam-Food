@@ -2,47 +2,47 @@
 
 namespace Moodify
 {
-	public partial class App : Application
-	{
-		
-		public static NavigationPage NavigationPage { get; private set; }
-		public static RootPage RootPage;
+    public partial class App : Application
+    {
 
-		public static bool MenuIsPresented
-		{
-			get
-			{
-				return RootPage.IsPresented;
-			}
-			set
-			{
-				RootPage.IsPresented = value;
-			}
-		}
+        public static NavigationPage NavigationPage { get; private set; }
+        public static RootPage RootPage;
 
-		public App()
-		{
-			var menuPage = new MenuPage();
-			NavigationPage = new NavigationPage(new HomePage());
-			RootPage = new RootPage();
-			RootPage.Master = menuPage;
-			RootPage.Detail = NavigationPage;
-			MainPage = RootPage;
-		}
+        public static bool MenuIsPresented
+        {
+            get
+            {
+                return RootPage.IsPresented;
+            }
+            set
+            {
+                RootPage.IsPresented = value;
+            }
+        }
 
-		protected override void OnStart()
-		{
-			// Handle when your app starts
-		}
+        public App()
+        {
+            var menuPage = new MenuPage();
+            NavigationPage = new NavigationPage(new HomePage());
+            RootPage = new RootPage();
+            RootPage.Master = menuPage;
+            RootPage.Detail = NavigationPage;
+            MainPage = new HomePage();
+        }
 
-		protected override void OnSleep()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }
