@@ -5,9 +5,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.StackPage">
   <StackLayout>
-    <Label Text="Label1" />
-    <Label Text="Label2" />
-    <Label Text="Label3" />
+    <Label  Text="Wellcom to xxxx"></Label>
+    <StackLayout>
+      <Image  Source="http://schema.org/SearchResultsPage" ></Image>
+      <Label  Text="food"></Label>
+    </StackLayout>
+    
+    <Button  Text="Find the place"></Button>
   </StackLayout>
   
 </ContentPage>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Moodify.Models
 {
     class Menu
@@ -15,6 +16,8 @@ namespace Moodify.Models
         [JsonProperty(PropertyName = "Name")]
         public string Name { get; set; }
 
-        
+        [JsonProperty(PropertyName = "Price")]
+        public string Price { get; set; }
+
     }
 }

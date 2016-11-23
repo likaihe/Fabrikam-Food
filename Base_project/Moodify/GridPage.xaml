@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+  Padding="0,0,20,0"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Moodify.GridPage">
+  <Grid>
+    
+<Label Grid.Row="0" Grid.Column="1" Text="Wellcom to "></Label>
+ <Image Grid.Row="1" Grid.Column="1" Source="http://placehold.it/300*300" ></Image>
+ <Button Grid.Row="2" Grid.Column="1" Text="Find the place"></Button>
+  </Grid>
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentPage>

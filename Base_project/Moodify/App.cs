@@ -28,8 +28,9 @@ namespace Moodify
 			RootPage.Master = menuPage;
 			RootPage.Detail = NavigationPage;
             //MainPage = RootPage;
-            // MainPage = new HomePage();
-            MainPage = new StackPage();
+             MainPage = new HomePage();
+            //MainPage = new StackPage();
+           // MainPage = new GridPage();
 		}
 
 		protected override void OnStart()

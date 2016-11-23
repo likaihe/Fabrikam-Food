@@ -1,5 +1,5 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
-using Moodify.Models;
+using Moodify.DataModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,23 +13,18 @@ namespace Moodify
 
         private static AzureManager instance;
         private MobileServiceClient client;
-        private IMobileServiceTable menu;
-
-
+        private IMobileServiceTable<Timeline> timelineTable;
 
         private AzureManager()
         {
             this.client = new MobileServiceClient("http://likaifabrikamfood.azurewebsites.net");
-            //create a table reference
-            this.menu = this.client.GetTable<Menu>();   
+            this.timelineTable = this.client.GetTable<Timeline>();
         }
 
         public MobileServiceClient AzureClient
         {
             get { return client; }
         }
-
-        
 
         public static AzureManager AzureManagerInstance
         {
@@ -44,10 +39,14 @@ namespace Moodify
             }
         }
 
-        //public async Task<List<Menu>> GetMenus()
-        //{
-        //   // return await this.menu.ToString();
-        //}
+        public async Task AddTimeline(Timeline timeline)
+        {
+            await this.timelineTable.InsertAsync(timeline);
+        }
 
+        public async Task<List<Timeline>> GetTimelines()
+        {
+            return await this.timelineTable.ToListAsync();
+        }
     }
 }
