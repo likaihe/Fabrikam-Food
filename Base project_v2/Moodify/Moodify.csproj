@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureManager.cs" />
+    <Compile Include="DataModels\Menu.cs" />
+    <Compile Include="DataModels\OrderList.cs" />
     <Compile Include="DataModels\Timeline.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

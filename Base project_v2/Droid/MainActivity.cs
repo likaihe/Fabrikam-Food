@@ -11,6 +11,7 @@ using Plugin.Permissions;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
 using static Moodify.App;
+//using Facebook;
 
 namespace Moodify.Droid
 {
