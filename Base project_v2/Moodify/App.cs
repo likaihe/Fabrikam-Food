@@ -32,8 +32,8 @@ namespace Moodify
             //MainPage = new FabrikamManuPage();
             //MainPage = new Views.OrderListPage();
             //MainPage = new MapPages();
-            //MainPage = RootPage;
-            MainPage = new PromotionPage();
+            MainPage = RootPage;
+            //MainPage = new PromotionPage();
         }
 
         protected override void OnStart()

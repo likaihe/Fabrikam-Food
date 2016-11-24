@@ -10,6 +10,7 @@ namespace Moodify
 		public ICommand GoSecondCommand { get; set; }
         public ICommand GoMenuCommand { get; set; }
         public ICommand GoOrderCommand { get; set; }
+        public ICommand GoPromotionCommand { get; set; }
 
         public MenuPageViewModel()
 		{
@@ -17,6 +18,7 @@ namespace Moodify
 			GoSecondCommand = new Command(GoSecond);
             GoMenuCommand = new Command(GoMenu);
             GoOrderCommand = new Command(GoOrder);
+            GoPromotionCommand = new Command(GoPromotion);
         }
 
 		void GoHome(object obj)
@@ -40,6 +42,12 @@ namespace Moodify
         void GoOrder(object obj)
         {
             App.RootPage.Detail = new NavigationPage(new Views.OrderListPage());
+            App.MenuIsPresented = false;
+        }
+
+        void GoPromotion(object obj)
+        {
+            App.RootPage.Detail = new NavigationPage(new PromotionPage());
             App.MenuIsPresented = false;
         }
     }

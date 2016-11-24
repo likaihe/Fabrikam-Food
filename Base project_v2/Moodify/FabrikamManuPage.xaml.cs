@@ -11,11 +11,12 @@ namespace Moodify
 {
     public partial class FabrikamManuPage : ContentPage
     {
+        
+
         public FabrikamManuPage()
         {
             getList();
             InitializeComponent();
-
         }
 
         private async void ViewTimeline_Clicked(Object sender, EventArgs e)

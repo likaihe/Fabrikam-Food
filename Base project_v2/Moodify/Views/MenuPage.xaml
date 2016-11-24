@@ -4,11 +4,19 @@
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
 	</ContentPage.Padding>
 	<ContentPage.Content>
+
 		<StackLayout BackgroundColor="White">
+      <Label Text="User" TextColor="Red"/>
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
 			<!--<Button Text="Second Page" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />-->
       <Button Text="Menu" TextColor="White" BackgroundColor="Green" Command="{Binding GoMenuCommand}" />
-      <Button Text="Order" TextColor="White" BackgroundColor="Green" Command="{Binding GoOrderCommand}" />
-		</StackLayout>
+      <Button Text="Promotion" TextColor="White" BackgroundColor="Green" Command="{Binding GoPromotionCommand}" />
+
+      <Label Text="Administrator" TextColor="Red"/>
+      <Button Text="OrderList" TextColor="White" BackgroundColor="Green" Command="{Binding GoOrderCommand}" />
+      <Button Text="CreatPromotion" TextColor="White" BackgroundColor="Green" />
+      <Button Text="CreatMenu" TextColor="White" BackgroundColor="Green" />
+		
+    </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage Title="Menu" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.FabrikamManuPage">
   <StackLayout BackgroundColor="White">
     <Button Text="Refresh MenuList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
     <ListView x:Name="MenuList" HasUnevenRows="True">
       <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
+        <DataTemplate >
+          <ViewCell >
             <Grid>
               <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -19,7 +20,7 @@
               </Grid.ColumnDefinitions>
               
               <Button Grid.Column="0" Text="Order" TextColor="White" BackgroundColor="Red" Clicked ="Order_Clicked" />
-              <Label Grid.Column="1" Text="{Binding Name}"/>
+              <Label Grid.Column="1" Text="{Binding Name}" />
               <Label Grid.Column="2" Text="{Binding Price}"/>
 
             </Grid>

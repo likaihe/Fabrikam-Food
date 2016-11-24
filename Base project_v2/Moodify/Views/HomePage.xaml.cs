@@ -16,6 +16,14 @@ namespace Moodify
         public HomePage()
         {
             InitializeComponent();
+            var imageSource1 = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/food/1/") };
+            var imageSource2 = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/foods/1/") };
+           
+
+            image1.Source = imageSource1;
+            image2.Source = imageSource2;
+           
+            
         }
 
         protected override async void OnAppearing()
@@ -52,14 +60,7 @@ namespace Moodify
             }
         }
 
-        private async void ViewTimeline_Clicked(Object sender, EventArgs e)
-        {
 
-            List<Timeline> timelines = await AzureManager.AzureManagerInstance.GetTimelines();
-
-            TimelineList.ItemsSource = timelines;
-
-        }
 
 
     }
