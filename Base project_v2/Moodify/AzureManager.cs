@@ -19,7 +19,7 @@ namespace Moodify
 
         private AzureManager()
         {
-            this.client = new MobileServiceClient("http://likaifabrikamfood.azurewebsites.net");
+            this.client = new MobileServiceClient("https://likaifabrikamfood.azurewebsites.net");
             this.timelineTable = this.client.GetTable<Timeline>();
            this.menuTable = this.client.GetTable<Menu>();
             this.orderListTable = this.client.GetTable<OrderList>();
@@ -47,6 +47,11 @@ namespace Moodify
         public async Task AddTimeline(Timeline timeline)
         {
             await this.timelineTable.InsertAsync(timeline);
+        }
+
+        public async Task AddOder(OrderList order)
+        {
+            await this.orderListTable.InsertAsync(order);
         }
 
         //Get the data

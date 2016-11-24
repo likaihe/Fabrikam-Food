@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="100*" />
               </Grid.ColumnDefinitions>
               
-              <Button Grid.Column="0" Text="Order" TextColor="White" BackgroundColor="Red" Clicked ="Order_Clicked" />
+              <Button Grid.Column="0" Text="Order" TextColor="White" BackgroundColor="Red" Clicked ="Order_Clicked" Tag="{Binding Name}"/>
               <Label Grid.Column="1" Text="{Binding Name}"/>
               <Label Grid.Column="2" Text="{Binding Price}"/>
 
