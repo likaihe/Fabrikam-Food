@@ -5,7 +5,23 @@
              x:Class="Moodify.FabrikamManuPage">
   <StackLayout BackgroundColor="White">
     <Button Text="Refresh MenuList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100*" />
+        <ColumnDefinition Width="100*" />
+        <ColumnDefinition Width="100*" />
+      </Grid.ColumnDefinitions>
+
+
+      <Label Grid.Column="1" Text="Name" TextColor="Red"/>
+      <Label Grid.Column="2" Text="Price" TextColor="Red"/>
+
+    </Grid>
     <ListView x:Name="MenuList" HasUnevenRows="True">
+      
       <ListView.ItemTemplate>
         <DataTemplate >
           <ViewCell >

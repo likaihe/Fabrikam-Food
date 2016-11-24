@@ -39,11 +39,11 @@ namespace Moodify
 
 
             //need inptut userName and Tel then post the data to OerlistTable
-            string customer = "";
+            string customer = "user";
 
-            string name = "";
-            int tel = 000;
-            string time = "";
+            string name = "food";
+            int tel = 02100000;
+            string time = "time";
             //get the value
             //name = sender.
             OrderList order = new OrderList
