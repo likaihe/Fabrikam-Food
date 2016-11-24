@@ -21,7 +21,7 @@ namespace Moodify.DataModels
         [JsonProperty(PropertyName = "tel")]
         public int Tel { get; set; }
 
-        [JsonProperty(PropertyName = "createdAt")]
-        public DateTime Date { get; set; }
+        [JsonProperty(PropertyName = "time")]
+        public string Time { get; set; }
     }
 }
