@@ -6,7 +6,9 @@
 	<ContentPage.Content>
 		<StackLayout BackgroundColor="White">
 			<Button Text="Home" TextColor="White" BackgroundColor="Green" Command="{Binding GoHomeCommand}" />
-			<Button Text="Second Page" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />
+			<!--<Button Text="Second Page" TextColor="White" BackgroundColor="Navy" Command="{Binding GoSecondCommand}" />-->
+      <Button Text="Menu" TextColor="White" BackgroundColor="Green" Command="{Binding GoMenuCommand}" />
+      <Button Text="Order" TextColor="White" BackgroundColor="Green" Command="{Binding GoOrderCommand}" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

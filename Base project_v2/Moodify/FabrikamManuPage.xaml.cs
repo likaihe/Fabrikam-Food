@@ -13,6 +13,7 @@ namespace Moodify
     {
         public FabrikamManuPage()
         {
+            getList();
             InitializeComponent();
 
         }
@@ -24,6 +25,12 @@ namespace Moodify
 
             MenuList.ItemsSource = menus;
 
+        }
+
+        private async void getList() {
+            List<Menu> menus = await AzureManager.AzureManagerInstance.GetMenus();
+
+            MenuList.ItemsSource = menus;
         }
 
         private async void Order_Clicked(Object sender, EventArgs e)

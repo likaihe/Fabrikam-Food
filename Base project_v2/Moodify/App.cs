@@ -30,8 +30,10 @@ namespace Moodify
             RootPage.Detail = NavigationPage;
             //MainPage = new HomePage();
             //MainPage = new FabrikamManuPage();
-            MainPage = new Views.OrderListPage();
+            //MainPage = new Views.OrderListPage();
             //MainPage = new MapPages();
+            //MainPage = RootPage;
+            MainPage = new PromotionPage();
         }
 
         protected override void OnStart()

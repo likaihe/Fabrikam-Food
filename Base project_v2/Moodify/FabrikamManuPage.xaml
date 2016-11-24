@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.FabrikamManuPage">
   <StackLayout BackgroundColor="White">
-    <Button Text="See MenuList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
+    <Button Text="Refresh MenuList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
     <ListView x:Name="MenuList" HasUnevenRows="True">
       <ListView.ItemTemplate>
         <DataTemplate>
@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="100*" />
               </Grid.ColumnDefinitions>
               
-              <Button Grid.Column="0" Text="Order" TextColor="White" BackgroundColor="Red" Clicked ="Order_Clicked" Tag="{Binding Name}"/>
+              <Button Grid.Column="0" Text="Order" TextColor="White" BackgroundColor="Red" Clicked ="Order_Clicked" />
               <Label Grid.Column="1" Text="{Binding Name}"/>
               <Label Grid.Column="2" Text="{Binding Price}"/>
 

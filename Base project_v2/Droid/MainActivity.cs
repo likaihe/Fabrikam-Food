@@ -20,21 +20,22 @@ namespace Moodify.Droid
     {
 		protected override void OnCreate(Bundle bundle)
 		{
-			TabLayoutResource = Resource.Layout.Tabbar;
+           
+            TabLayoutResource = Resource.Layout.Tabbar;
 			ToolbarResource = Resource.Layout.Toolbar;
 
 			base.OnCreate(bundle);
             
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            
+            //map 
+            //Xamarin.FormsMaps.Init(this, bundle);
 
             // Initialize the authenticator before loading the app.
             App.Init((IAuthenticate)this);
 
             LoadApplication(new App());
-            //map 
-            //Xamarin.FormsMaps.Init(this, bundle);
+            
         }
         //have no ideals what threy are doing here but I need them
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)

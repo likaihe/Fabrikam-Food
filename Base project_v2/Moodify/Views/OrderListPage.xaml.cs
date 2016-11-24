@@ -11,9 +11,11 @@ namespace Moodify.Views
 {
     public partial class OrderListPage : ContentPage
     {
-        public OrderListPage()
+        public  OrderListPage()
         {
+            getList();
             InitializeComponent();
+  
         }
 
         private async void ViewTimeline_Clicked(Object sender, EventArgs e)
@@ -24,6 +26,13 @@ namespace Moodify.Views
             OrderListLayOut.ItemsSource = oderLists;
 
         }
+
+        private async void getList() {
+            List<OrderList> oderLists = await AzureManager.AzureManagerInstance.GetOrderList();
+            OrderListLayOut.ItemsSource = oderLists;
+        }
+
+       
 
         private void Delete_Clicked(Object sender, EventArgs e)
         {

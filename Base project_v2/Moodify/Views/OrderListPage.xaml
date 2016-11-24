@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.Views.OrderListPage">
   <StackLayout BackgroundColor="White">
-    <Button Text="See OrderList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
+    <Button Text="Refresh OrderList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
     <ListView x:Name="OrderListLayOut" HasUnevenRows="True">
       <ListView.ItemTemplate>
         <DataTemplate>
