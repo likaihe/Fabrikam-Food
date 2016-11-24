@@ -35,37 +35,25 @@ namespace Moodify
             if (file == null)
                 return;
 
-            try
-            {
-                UploadingIndicator.IsRunning = true;
 
-                
-
-                UploadingIndicator.IsRunning = false;
-
-                
-
-            }
-            catch (Exception ex)
-            {
-                errorLabel.Text = ex.Message;
-            }
-
-            image.Source = ImageSource.FromStream(() =>
-            {
-                var stream = file.GetStream();
-                file.Dispose();
-                return stream;
-            });
+            var imageSource = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/foods/1/") };
+            image.Source = imageSource;
+            //image.Source = ImageSource.FromStream(() =>
+            //{
+            //    var stream = file.GetStream();
+            //    file.Dispose();
+            //    return stream;
+            //});
         }
 
-        private async void ViewTimeline_Clicked(Object sender, EventArgs e)
-        {
+        private void Share_Clicked(object sender, EventArgs e) {
+            //code for share
 
-            List<Timeline> timelines = await AzureManager.AzureManagerInstance.GetTimelines();
-
-            TimelineList.ItemsSource = timelines;
-
+            DisplayAlert("Share", "share Success", "Ok");
         }
+
+
+
+
     }
 }
