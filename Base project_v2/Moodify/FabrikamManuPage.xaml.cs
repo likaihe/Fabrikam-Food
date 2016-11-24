@@ -28,16 +28,18 @@ namespace Moodify
 
         private async void Order_Clicked(Object sender, EventArgs e)
         {
-           
+
+
             //need inptut userName and Tel then post the data to OerlistTable
             string customer = "";
-            
+
             string name = "";
             int tel = 000;
             string time = "";
             //get the value
             //name = sender.
-            OrderList order = new OrderList {
+            OrderList order = new OrderList
+            {
                 Customer = customer,
                 Name = name,
                 Tel = tel,
@@ -48,8 +50,37 @@ namespace Moodify
 
 
             //if success out put below
-           await DisplayAlert("Order", "Success","Ok");
+            await DisplayAlert("Order", "Success", "Ok");
 
         }
+
+        //private async void Order_Clicked(object sender, ItemTappedEventArgs args)
+        //{
+        //    var itemSelected = args.Item;
+        //    itemSelected
+
+        //    //need inptut userName and Tel then post the data to OerlistTable
+        //    string customer = "";
+
+        //    //string name = "";
+        //    int tel = 000;
+        //    string time = "";
+        //    //get the value
+        //    //name = sender.
+        //    OrderList order = new OrderList
+        //    {
+        //        Customer = customer,
+        //        Name = name,
+        //        Tel = tel,
+        //        Time = time
+        //    };
+        //    await AzureManager.AzureManagerInstance.AddOder(order);
+
+
+
+        //    //if success out put below
+        //    await DisplayAlert("Order", "Success", "Ok");
+
+        //}
     }
 }
