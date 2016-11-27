@@ -31,8 +31,8 @@ namespace Moodify
             //MainPage = new HomePage();
             //MainPage = new FabrikamManuPage();
             //MainPage = new Views.OrderListPage();
-            //MainPage = new MapPages();
-            MainPage = RootPage;
+            MainPage = new MapPages();
+            //MainPage = RootPage;
             //MainPage = new PromotionPage();
         }
 

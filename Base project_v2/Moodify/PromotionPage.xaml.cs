@@ -36,7 +36,7 @@ namespace Moodify
                 return;
 
 
-            var imageSource = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/foods/1/") };
+            var imageSource = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/foods/2/") };
             image.Source = imageSource;
             //image.Source = ImageSource.FromStream(() =>
             //{

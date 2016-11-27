@@ -6,6 +6,7 @@
     <Button Text="Refresh OrderList" TextColor="White" BackgroundColor="Red" Clicked ="ViewTimeline_Clicked" />
     <ListView x:Name="OrderListLayOut" HasUnevenRows="True">
       <ListView.ItemTemplate>
+        
         <DataTemplate>
           <ViewCell>
             <Grid>
